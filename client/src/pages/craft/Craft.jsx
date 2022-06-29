@@ -9,7 +9,6 @@ const ImgDivOneBtmImg = "https://images.unsplash.com/photo-1548351791-c05bc7db50
 
 function Craft(){
     const [image, setImage] = useState(null);
-    const [uploadingImg, setUploadingimg] = useState(false);
     const [imagePreview, setImagePreview] = useState(null);
 
     function validateImg(e){
@@ -21,35 +20,7 @@ function Craft(){
             setImagePreview(URL.createObjectURL(file));
         }
     }
-
-    async function uploadImage(){
-        const data = new FormData();
-        data.append('file', image);
-        data.append('upload_preset', 'd9ri4a5y');
-        try{
-            setUploadingimg(true);
-            let res = await fetch('https://api.cloudinary.com/v1_1/learn-code-10/image/upload', {
-                method: 'POST',
-                body: data
-            });
-            const urlData = await res.json();
-            setUploadingimg(false);
-            return urlData.url;
-        } catch (error) {
-            setUploadingimg(false);
-            console.log(error);
-        }
-    }
-
-    async function handleSubmit(e){
-        e.preventDefault();
-        if(!image){
-            return alert('Please upload your profile picture.')
-        }
-        const url = await uploadImage(image);
-        console.log(url);
-    }
-
+    
     return(
         <div className="craft">
             <div className="video-overlay"></div>
