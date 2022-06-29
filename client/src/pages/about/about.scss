@@ -1,0 +1,373 @@
+@import '../../responsive.scss';
+
+@font-face { 
+    font-family: surf-breaks;
+    src: url('../../fonts/font-style-surf-shack/Surfshack-78KK.ttf');
+}
+
+@font-face {
+    font-family: surf-about;
+    src: url('../../fonts/font-style-surf-shack/Surfshack-78KK.ttf');
+}
+
+.about{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    .bckgrnd{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .vrly{
+            position: absolute;
+            top: 0;
+            height: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: 0.15;
+        }
+
+        .bx{
+            width: 280px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: red;
+
+            .img-bx{
+                width: 220px;
+                height: 100%;
+                background-color: orange;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .ppst-dvs{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        .rltv-dv{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: flex;
+
+            .lft-dv{
+                position: relative;
+                flex: 4;
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+
+                @include mobile{
+                    width: 130px;
+                }
+
+                .lft-tp-dv{
+                    margin: 10px 0;
+                    width: 320px;
+                    height: 50%;
+                    transform: rotate(5deg);
+                    background-color: #fff;
+
+                    @include mobile{
+                        width: 130px;
+                    }
+
+                    img{
+                        margin: 13px;
+                        width: 90%;
+                        height: 90%;
+                        object-fit: cover;
+
+                        @include mobile{
+                            width: 80%;
+                        }
+                    }
+                }
+
+                .lft-cntr-dv{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include mobile{
+                        width: 130px;
+                    }
+
+                    .lft-cntr-img-dv{
+                        margin: 15px;
+                        height: 330px;
+                        width: 360px;
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #fff;
+                        transform: rotate(5deg);
+                        box-shadow: 0px 3px 2px 3px rgba(0, 0, 0, 0.5);
+                        z-index: 99;
+                        
+                        img{
+                            margin: 25px;
+                            width: 85%;
+                            height: 80%;
+                            object-fit: cover;
+
+                            @include mobile {
+                                margin: 10px;
+                                width: 80%;
+                                height: 70%;
+                                object-fit: cover;
+                            }
+                        }
+
+                        h1{
+                            align-self: center;
+                            font-size: 30px;
+                            font-family: surf-breaks;
+                            z-index: 9;
+
+                            @include mobile{
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+                .lft-bttm-dv{
+                    margin: 10px 0;
+                    height: 50%;
+                    width: 320px;
+                    display: flex;
+                    flex-direction: column;
+                    transform: rotate(-10deg);
+                    background-color: #fff;
+
+                    @include mobile{
+                        width: 130px;
+                    }
+
+                    img{
+                        margin: 12px;
+                        width: 90%;
+                        height: 80%;
+                        object-fit: cover;
+
+                        @include mobile{
+                            margin: 12px;
+                            width: 80%;
+                            height: 80%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    h1{
+                        align-self: center;
+                        font-size: 30px;
+                        font-family: surf-breaks;
+
+                        @include mobile{
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+
+            .cntr-dv{
+                position: relative;
+                flex: 8;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                z-index: 999;
+
+                .ps-cntr-dv{
+                    position: absolute;
+                    bottom: 10%;
+                    height: 450px;
+                    width: 750px;
+                    border: 1px solid #000;
+                    border-radius: 30px;
+                    background-color: #000;
+                    opacity: 0.7;
+
+                    @include mobile{
+                        width: 330px;
+                    }
+
+                    .bt-ps-cntr-dv{
+                        position: relative;
+                        height: 100%;
+                        width: 100%;
+
+                        .bt-cntr-dv {
+                            position: absolute;
+                            top: 30%;
+                            left: 2%;
+                            height: 390px;
+                            width: 650px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 30px;
+                            background-color: #fff;
+                        
+                            @include mobile {
+                                width: 290px;
+                                height: 340px;
+                            }
+
+                            p{
+                                font-family: surf-about;
+                                font-weight: bolder;
+                                font-size: 18px;
+                                letter-spacing: 3px;
+                                z-index: 99;
+
+                                @include mobile{
+                                    margin: 0 20px;
+                                    align-self: center;
+                                    letter-spacing: 1px;
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .rght-dv{
+                position: relative;
+                flex: 4;
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+
+                @include mobile{
+                    width: 130px;
+                }
+
+                .rght-tp-dv{
+                    align-self: flex-end;
+                    margin: 10px 0;
+                    width: 320px;
+                    height: 50%;
+                    transform: rotate(-5deg);
+                    background-color: #fff;
+
+                    @include mobile{
+                        width: 130px;
+                    }
+
+                    img{
+                        margin: 12px;
+                        width: 90%;
+                        height: 90%;
+                        object-fit: cover;
+                    }
+                }
+
+                .rght-cntr-dv{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .rght-cntr-img-dv{
+                        margin: 0 10px;
+                        height: 350px;
+                        width: 360px;
+                        display: flex;
+                        flex-direction: column;
+                        transform: rotate(-20deg);
+                        background-color: #fff;
+                        z-index: 99;
+
+
+                        img{
+                            margin: 25px;
+                            width: 85%;
+                            height: 80%;
+                            object-fit: cover;
+
+                            @include mobile{
+                                margin: 15px;
+                                width: 80%;
+                            }
+                        }
+
+                        h1{
+                            align-self: center;
+                            font-size: 19px;
+                            font-family: surf-breaks;
+                            z-index: 9;
+
+                            @include mobile{
+                                font-size: 15px;
+                            }
+                        }
+                    }
+
+                }
+
+                .rght-bttm-dv{
+                    align-self: flex-end;
+                    margin: 10px 0;
+                    width: 320px;
+                    height: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    transform: rotate(5deg);
+                    background-color: #fff;
+
+                    @include mobile{
+                        width: 130px;
+                    }
+
+                    img{
+                        margin: 15px;
+                        width: 90%;
+                        height: 80%;
+                        object-fit: cover;
+                    }
+
+                    h1{
+                        align-self: center;
+                        font-size: 30px;
+                        font-family: surf-breaks;
+
+                        @include mobile{
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

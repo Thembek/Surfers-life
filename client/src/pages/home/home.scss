@@ -1,0 +1,228 @@
+@import "../../responsive.scss";
+
+@font-face {
+    font-family: surf-shack;
+    src: url('../../fonts/font-style-surf-shack/Surfshack-78KK.ttf');
+}
+
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    .images{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .home-text{
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        font-family: surf-shack;
+
+        .hm-txt-ps{
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+
+            .line-1 {
+                margin-left: 50px;
+                #txt-1{
+                font-size: 85px;
+                font-weight: bold;
+                color: rgb(166, 11, 11);
+                cursor: pointer;
+
+                @include mobile{
+                    font-size: 50px;
+                }
+                }
+
+                #txt-1:hover{
+                -webkit-mask-image: linear-gradient(-75deg,
+                            rgba(0, 0, 0, 0.6) 30%, #1f2a65);
+                    -webkit-mask-size: 200%;
+                    animation: glither 2s infinite ease-in-out;
+                }
+                
+                @-webkit-keyframes glither {
+                    from {
+                        -webkit-mask-position: 150%;
+                
+                    }
+                
+                    to {
+                        -webkit-mask-position: -50%;
+                    }
+                }
+            }
+
+            .line-2{
+                h1{
+                    font-size: 95px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    background: linear-gradient(
+                        to right, hsl(240, 47%, 18%) 20%, 
+                        hsl(62, 100%, 50%) 40%,
+                        hsl(60, 3%, 37%) 70%,
+                        hsl(0, 65%, 40%) 99%,
+   
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    animation: shine 3s infinite linear;
+
+                    @include mobile{
+                        font-size: 43px;
+                    }
+                }
+
+                @keyframes shine{
+                    0%{
+                        background-position: 0;
+                    }
+
+                    60%{
+                        background-position: 600px;
+                    }
+
+                    100%{
+                        background-position: 720px;
+                    }
+                }
+
+                #txt-symbol{
+                    font-size: 95px;
+                    font-weight: bold;
+
+                    @include mobile{
+                        font-size: 40px;
+                    }
+                }
+            }
+
+            .line-3{
+                align-self: center;
+                
+                @include mobile{
+                    align-self: flex-start;
+                }
+
+                #txt-3{
+                    font-size: 86px;
+                    font-weight: bold;
+                    color: orange;
+                    cursor: pointer;
+                    transition-duration: 0.2s;
+
+                    @include mobile{
+                        font-size: 39px;
+                    }
+                }
+
+                #txt-3:hover{
+                    -webkit-mask-image: linear-gradient(-75deg,
+                        rgba(0, 0, 0, 0.6) 30%, #1f2a65);
+                    -webkit-mask-size: 200%;
+                    animation: glither 2s infinite ease-in-out;
+                }
+                    
+                @-webkit-keyframes glither {
+                    from {
+                        -webkit-mask-position: 150%;
+                    
+                    }
+                    
+                    to {
+                        -webkit-mask-position: -50%;
+                    }
+                }
+            }
+
+            .line-4 {
+                align-self: center;
+
+                @include mobile{
+                    align-self: flex-start;
+                }
+
+                h1{
+                    font-size: 75px;
+                    font-weight: bold;
+                    cursor: pointer;
+
+                    @include mobile{
+                        font-size: 65px;
+                    }
+
+                    #txt-4 {
+                        transition: 0.5s ease-out;
+                    }
+                }
+
+                h1:hover span{
+                    color: rgb(237, 160, 173);
+                    text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 20px #fff;
+                }
+            }
+            
+        }
+    }
+
+    .btn-down{
+        position: absolute;
+        right: 30px;
+        bottom: 10px;
+        border: 2px solid orange;
+        animation: blink 2s infinite linear;
+        cursor: pointer;
+
+        &:hover{
+            animation-play-state: paused;
+        }
+
+        @include mobile{
+            right: 10px;
+            width: 50px;
+        }
+
+        img{
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            width: 90px;
+
+            @include mobile{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        @keyframes blink {
+            0%{
+                padding-top: 0;
+                opacity: 1;
+            }
+
+            50%{
+                padding-bottom: 10px;
+                opacity: 0.1;
+            }
+
+            100%{
+                padding-bottom: -50px;
+                opacity: 1;
+            }
+        }
+    }
+}

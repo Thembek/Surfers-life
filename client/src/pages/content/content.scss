@@ -1,0 +1,428 @@
+@import '../../responsive.scss';
+
+@font-face {
+    font-family: surf-waves;
+    src: url('../../fonts/font-style-surf-shack/Surfshack-78KK.ttf');
+}
+
+@font-face {
+    font-family: surf-title;
+    src: url('../../fonts/font-style-bahamas/BahamasTwoPersonalUseBold-ywEVq.ttf');
+}
+
+.content{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+
+    .cnt-ttl{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+
+        h1{
+            align-self: center;
+            font-family: surf-title;
+            font-weight: bolder;
+            font-size: 55px;
+            color: #fff;
+            text-shadow: rgba(0, 0, 0, 0.5) 2px 5px;
+
+            @include mobile{
+                align-self: center;
+                font-size: 35px;
+            }
+        }
+    }
+
+    .cnt-bckgrnd-img{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .cntnt-vrly{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: 0.4;
+        }
+
+        .cnt-img-dv{
+            height: 100%;
+            width: 320px;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .img-dv{
+                height: 100%;
+                width: 80%;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .ps-dv-cnt{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        .rlvnt-cnt-dv{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            @include mobile{
+                display: flex; 
+                flex-direction: column;
+            }
+
+            .bx-1{
+                position: relative;
+                flex: 9;
+                display: flex;
+
+                @include mobile{
+                    flex: 2;
+                }
+
+                .tp-btm-img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include mobile{
+                        display: none;
+                    }
+
+                    .tp-img{
+                        position: relative;
+                        width: 350px;
+                        height: 260px;
+                        margin: 80px 0;
+                        background-color: #fff;
+                        box-shadow: 3px 2px 6px rgba(0, 0, 0, 0.5);
+
+                        img{
+                            width: 80%;
+                            height: 80%;
+                            margin: 35px;
+                            object-fit: cover;
+                        }
+                    }
+                    .dwn-img{
+                        position: relative;
+                        width: 350px;
+                        height: 260px;
+                        margin: 30px 0;
+                        background-color: #fff;
+
+                        img{
+                            width: 80%;
+                            height: 80%;
+                            margin: 40px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                .lft-img{
+                    position: relative;
+                    width: 340px;
+                    height: 250px;
+                    margin: 0 10px;
+                    align-self: center;
+
+                    @include mobile{
+                        width: 120px;
+                        height: 110px;
+                        margin: 0 95px;
+                    }
+
+                    .lft-img-dv{
+                        position: relative;
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #fff;
+                        box-shadow: 5px 4px 3px 4px rgba(0, 0, 0, 0.5);
+
+                        img{
+                            width: 80%;
+                            height: 80%;
+                            margin: 25px;
+                            object-fit: cover;
+                        }
+                    }
+                } 
+
+                .cntr-dv{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0 90px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .cntr-vd-dv{
+                        position: relative;
+                        width: 390px;
+                        height: 270px;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #fff;
+                        box-shadow: 3px 4px 3px 4px rgba(0, 0, 0, 0.3);
+
+                        @include mobile{
+                            width: 90px;
+                            height: 120px;
+                        }
+
+                        .vd-dv{
+                            position: relative;
+                            width: 80%;
+                            height: 80%;
+                            margin: 25px 40px;
+
+                            @include mobile{
+                                margin: 10px 10px;
+                            }
+
+                            video{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+
+                .bch-brk-ps{
+                    position: absolute;
+                    left: 0;
+                    bottom: 5%;
+                    margin: 0 5px;
+                    width: 290px;
+                    height: 320px;
+                    display: flex;
+                    flex-direction: column;
+                    transform: rotate(15deg);
+                    background-color: #fff;
+                    box-shadow: 5px 3px 2px 6px rgba(0, 0, 0, 0.5);
+
+                    @include mobile{
+                        margin: 0 20px;
+                        width: 102px;
+                        height: 105px;
+                    }
+
+                    img{
+                        width: 80%;
+                        height: 80%;
+                        margin: 30px;
+                        object-fit: cover;
+
+                        @include mobile{
+                            margin: 15px;
+                        }
+                    }
+
+                    a{
+                        text-decoration: none;
+                        text-align: center;
+                        color: #000;
+                        cursor: pointer;
+                    
+                        h1 {
+                            align-self: center;
+                            font-family: surf-waves;
+                            font-size: 22px;
+
+                            @include mobile{
+                                font-size: 8px;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+            .bx-2{
+                flex: 1;
+                background-color: #fff;
+                opacity: 0.9;
+
+                @include mobile{
+                    width: 100%;
+                    height: 90px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                }
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
+                    @include mobile{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .bx-3{
+                position: relative;
+                flex: 4;
+
+                @include mobile{
+                    flex: 2;
+                }
+
+                .bx-3-grd{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include mobile{
+                        display: flex;
+                        flex-direction: row;
+                    }
+
+                    .bx-3-one{
+                        position: relative;
+                        width: 95%;
+                        height: 330px;
+                        margin: 20px;
+                        background-color: #fff;
+
+                        @include mobile{
+                            margin: 0 10px;
+                            height: 180px;
+                            width: 120px;
+                        }
+
+                        img{
+                            width: 80%;
+                            height: 80%;
+                            margin: 25px;
+                            object-fit: cover;
+
+                            @include mobile{
+                                margin: 15px;
+                            }
+                        }
+                    }
+
+                    .bx-3-two{
+                        width: 95%;
+                        height: 330px;
+                        background-color: #fff;
+
+                        @include mobile{
+                            height: 180px;
+                            width: 120px;
+                        }
+
+                        img{
+                            width: 80%;
+                            height: 80%;
+                            margin: 25px;
+                            object-fit: cover;
+
+                            @include mobile{
+                                margin: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            .bx-4{
+                flex: 6;
+                display: flex;
+                flex-direction: column;
+
+                @include mobile{
+                    flex: 2;
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                .bx-4-one{
+                    width: 90%;
+                    height: 50%;
+                    margin: 20px;
+                    background-color: #000;
+
+                    video{
+                        width: 85%;
+                        height: 85%;
+                        margin: 30px;
+                        object-fit: cover;
+
+                        @include mobile{
+                            margin: 10px;
+                        }
+                    }
+
+                }
+                .bx-4-two{
+                    width: 90%;
+                    height: 50%;
+                    margin: 20px;
+                    background-color: #fff;
+
+                    video{
+                        height: 85%;
+                        width: 85%;
+                        object-fit: cover;
+                        margin: 30px;
+
+                        @include mobile{
+                            margin: 10px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

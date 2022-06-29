@@ -1,0 +1,255 @@
+@import '../../responsive.scss';
+
+@font-face {
+    font-family: surf-topics;
+    src: url('../../fonts/font-style-surf-shack/Surfshack-78KK.ttf');
+}
+
+@font-face{
+    font-family: surfs-up;
+    src: url('../../fonts/font-style-bahamas/BahamasTwoPersonalUseBold-ywEVq.ttf');
+}
+
+.craft{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    .video-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.5;
+        z-index: 1;
+    }
+
+    .video-div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    .images{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+
+        .img-ps{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: flex;
+
+            @include mobile{
+                flex-direction: column;
+            }
+
+            .img-div-one{
+                position: relative;
+                flex: 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .img-btm{
+                    width: 290px;
+                    height: 320px;
+                    transform: rotate(20deg);
+                    display: flex;
+                    flex-direction: column;
+                    box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.5);
+                    background-color: #fff;
+
+                    @include mobile{
+                        width: 120px;
+                        height: 230px;
+                    }
+
+                    img{
+                        width: 85%;
+                        height: 85%;
+                        margin: 25px;
+                        object-fit: cover;
+
+                        @include mobile{
+                            margin: 10px;
+                        }
+                    }
+
+                    h1{
+                        align-self: center;
+                        font-family: surf-topics;
+
+                        @include mobile{
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .img-tp{
+                    position: absolute;
+                    top: 12%;
+                    left: 30%;
+                    width: 290px;
+                    height: 320px;
+                    transform: rotate(35deg);
+                    box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.5);
+                    background-color: #fff;
+
+                    @include mobile{
+                        width: 120px;
+                        height: 190px;
+                    }
+
+                    img{
+                        width: 85%;
+                        height: 85%;
+                        margin: 25px;
+                        object-fit: cover;
+
+                        @include mobile{
+                            margin: 10px;
+                        }
+                    }
+                }
+
+                .upload{
+                    position: absolute;
+                    top: 8%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include mobile{
+                        top: 12%;
+                    }
+
+
+                    label{
+                        width: 50px;
+
+                        @include mobile{
+                            width: 35px;
+                        }
+
+                        .add-picture-icon{
+                            position: absolute;
+                            bottom: 0;
+                            right: 10px;
+                            color: green;
+                            border-radius: 10px;
+                            background: #fff;
+                            box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+                            cursor: pointer;
+                            z-index: 99;
+                        }
+                    }
+                }
+            }
+            .img-div-two{
+                position: relative;
+                flex: 1;
+                border: 1px solid #fff;
+            }
+            .img-div-three{
+                position: relative;
+                flex: 2;
+                display: flex;
+
+                .img-3-ttl{
+                    position: relative;
+                    top: 20%;
+                    left: 25%;
+
+                    @include mobile{
+                        top: 8%;
+                        left: 10%;
+                    }
+
+                    h1{
+                        font-family: surfs-up;
+                        color: #fff;
+
+                        @include mobile{
+                            font-size: 25px;
+                        }
+                    }
+
+                }
+                .img-thr-vid-div{
+                    position: absolute;
+                    left: 15%;
+                    bottom: 2%;
+
+                    .img-thr-rltv{
+                        position: relative;
+                        width: 290px;
+                        height: 290px;
+                        background-color: #fff;
+
+                        @include mobile{
+                            width: 190px;
+                            height: 190px;
+                        }
+
+                        .VideoInput{
+                            position: relative;
+                            height: 100%;
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+
+                            .video-label{
+                                position: absolute;
+                                width: 30px;
+                                height: 30px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 50%;
+                                background-color: #fff;
+                                box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.9);
+                                cursor: pointer;
+
+                                @include mobile{
+                                    width: 25px;
+                                    height: 25px;
+                                }
+
+                                .add-icon{
+                                    color: green;
+                                }
+                            }
+                            
+                            .VideoInput_video{
+                                width: 90%;
+                                height: 90%;
+                                margin: 14px;
+                                object-fit: cover;
+
+                                @include mobile{
+                                    margin: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
