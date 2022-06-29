@@ -1,8 +1,7 @@
 import React from 'react';
 import AddIcon from '@mui/icons-material/Add';
 
-export default function InputVideo(props){
-    const {width, height} = props;
+export default function InputVideo(){
 
     const inputRef = React.useRef();
 
@@ -12,10 +11,6 @@ export default function InputVideo(props){
         const file = event.target.files[0];
         const url = URL.createObjectURL(file);
         setSource(url);
-    };
-
-    const handleChoose = (event) => {
-        inputRef.current.click();
     };
 
     return(
